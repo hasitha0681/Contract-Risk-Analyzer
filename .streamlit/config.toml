@@ -1,0 +1,8 @@
+# sentence-transformers pulls in `transformers`, and Streamlit's file watcher
+# would crawl its ~200 submodules on every rerun. The app has nothing to
+# hot-reload at runtime, so the watcher is off.
+[server]
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false
